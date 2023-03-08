@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './dashboard.css'
 export default function Dashboard() {
     return (
@@ -15,12 +16,10 @@ export default function Dashboard() {
                         </div>
                         <div class="navi">
                             <ul>
-                                <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                                <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
-                                <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                                <li class="active"><Link to={"/admin/users"}><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></Link></li>
+                                <li><Link to={""}><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Inventory</span></Link></li>
+                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Sales</span></a></li>
+                            
                             </ul>
                         </div>
                     </div>
