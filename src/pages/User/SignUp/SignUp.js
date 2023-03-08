@@ -176,12 +176,12 @@ export default class SignUp extends Component {
                 </div>
                 <br/>
                 <div className="form-group">
-                    <label for="FirstName">Add</label>
+                    <label for="Address">Address</label>
                     <input 
                     type="text" 
                     className="form-control" 
-                    id="FirstName"
-                    placeholder="First name" 
+                    id="Address"
+                    placeholder="Address" 
                     value={this.state.address} 
                     onChange={(event) => this.setState({ address: event.target.value })} 
                     required/>
