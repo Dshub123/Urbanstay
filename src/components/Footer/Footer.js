@@ -9,21 +9,22 @@ const Footer=()=> {
           <div className="container grid grid-four-column">
             <div className="footer-social">
               <h3>Follow Us</h3>
+              
               <div className="footer-social--icons">
                   <a
                     href="https://www.gmail.com/"
                     target="_blank">
-                    <FaEnvelope className="icons mx-2" />
+                    <FaEnvelope className="icons mx-2" size={40} />
                   </a>
                   <a
                     href="https://www.instagram.com/"
                     target="_blank">
-                    <FaInstagram className="icons mx-2" />
+                    <FaInstagram className="icons mx-2" size={40}/>
                   </a>
                   <a
                     href="https://www.youtube.com/"
                     target="_blank">
-                    <FaYoutube className="icons mx-2" />
+                    <FaYoutube className="icons mx-2" size={50}/>
                   </a>
               </div>
           </div>
