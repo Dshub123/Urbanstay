@@ -9,15 +9,6 @@ import ErrorPage from "../pages/ErrorPages/Error404";
 import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
-import SingleRoom from "../components/Room/SingleRoom";
-const USER_ROLE = {
-    TENANT: "Tenant",
-    OWNER: "Owner",
-    ADMIN: "Admin",
-};
-
-const CURRENT_USER_ROLE = sessionStorage.getItem("role");
-
 
 const Router = () => {
     return (
@@ -25,42 +16,38 @@ const Router = () => {
             <Routes>
                 <Route
                     path="/"
-                    element={<PublicElement><Home /></PublicElement>}>
+                    element={<Home />}>
                 </Route>
                 <Route
                     path="/signin"
-                    element={<PublicElement><SignIn /></PublicElement>}>
+                    element={<SignIn />}>
                 </Route>
                 <Route
                     path="/signup"
-                    element={<PublicElement><SignUp /></PublicElement>}>
+                    element={<SignUp />}>
                 </Route>
                 {/* <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
         <Route path="/updateProfile" element={<UpdateProfile />}></Route> */}
                 <Route
                     exact path="/contact"
-                    element={<PublicElement><ContactUs /></PublicElement>}>
+                    element={<ContactUs />}>
                 </Route>
                 <Route
                     exact path="/about"
-                    element={<PublicElement><AboutUs /></PublicElement>} />
+                    element={<AboutUs />} />
                 <Route
                     exact path="/admin"
-                    element={<AdminElement><AdminHome /></AdminElement>} />
+                    element={<AdminHome />} ></Route>
                 <Route
                     exact path="/admin/users"
-                    element={<AdminElement><Users /></AdminElement>} />
+                    element={<Users />} />
                 {/* Room details Page route */}
                 {/* <Route exact path="/room/:id" element={<RoomDetails/>}/> */}
                 <Route
                     exact path="/checkout"
-                    element={<TenantElement><Checkout /></TenantElement>} />
+                    element={<Checkout />} />
                 <Route
-                    exact path="/tenant"
-                    element={<TenantElement><Tenant /></TenantElement>} />
-                 <Route
-                    exact path="/room"
-                    element={<TenantElement><SingleRoom /></TenantElement>} />
+                    exact path="/tenant"/>
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
 
@@ -68,33 +55,35 @@ const Router = () => {
     )
 }
 
-function PublicElement({ children }) {
-    return <>{children}</>;
-}
+// function PublicElement({ children }) {
+//     return <>{children}</>;
+// }
 
-function TenantElement({ children }) {
-    if (CURRENT_USER_ROLE == USER_ROLE.TENANT) {
-        return <>{children}</>;
-    }
-    else {
-        return <><ErrorPage /></>
-    }
-}
-function OwnerElement({ children }) {
-    if (CURRENT_USER_ROLE == USER_ROLE.OWNER) {
-        return <>{children}</>;
-    }
-    else {
-        return <><ErrorPage /></>
-    }
-}
-function AdminElement({ children }) {
-    if (CURRENT_USER_ROLE == USER_ROLE.ADMIN) {
-        return <>{children}</>;
-    }
-    else {
-        return <><ErrorPage /></>
-    }
-}
+// function TenantElement({ children }) {
+//     if (CURRENT_USER_ROLE == USER_ROLE.TENANT) {
+//         return <>{children}</>;
+//     }
+//     else {
+//         return <><ErrorPage /></>
+//     }
+// }
+// function OwnerElement({ children }) {
+//     if (CURRENT_USER_ROLE == USER_ROLE.OWNER) {
+//         return <>{children}</>;
+//     }
+//     else {
+//         return <><ErrorPage /></>
+//     }
+// }
+// function AdminElement({ children }) {
+
+//     if (CURRENT_USER_ROLE == "Admin") {
+
+//         return <>{children}</>;
+//     }
+//     else {
+//         return <><ErrorPage /></>
+//     }
+// }
 
 export default Router;
