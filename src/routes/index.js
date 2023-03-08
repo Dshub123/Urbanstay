@@ -14,7 +14,11 @@ const USER_ROLE = {
     OWNER: "owner",
     ADMIN: "admin",
 };
+<<<<<<< HEAD
 const CURRENT_USER_ROLE = USER_ROLE.ADMIN;
+=======
+const CURRENT_USER_ROLE = sessionStorage.getItem("role");
+>>>>>>> 840208a2ad71deecf8c25b29416e10de40565167
 
 
 const Router = () => {

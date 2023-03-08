@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <HomeNavbar />
-      <h3>Home Page</h3>
+      
       <Featured></Featured>
       <br />
       <FeaturedProperties></FeaturedProperties>
