@@ -1,0 +1,15 @@
+.container {
+    padding: 2rem 0;
+    text-align: center;
+}
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 2rem 0;
+}

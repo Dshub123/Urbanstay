@@ -1,0 +1,38 @@
+.form-control:focus{
+    border-color: #167bff;
+    box-shadow: none;
+}
+
+h3{
+    color: steelblue;
+    text-align: center;
+    margin:0;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+.custom-control-label {
+    font-weight: 400;
+  }
+
+#hrLine{
+    border: 2px solid steelblue;
+    border-radius: 5px;
+}
+#form-container{
+         width: 400;
+         height: 320;
+         padding: 20;
+         position:relative;
+         top:0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin:auto;
+         margin-top: 5%;
+         border-color:steelblue;
+         border-radius:10px;
+         border-width: 1;
+         border-style:solid;
+         box-shadow:1px 1px 2px 5px #C9C9C9;
+}
