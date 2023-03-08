@@ -18,7 +18,8 @@ export default function SignIn() {
     axios.post(config.serverURL+"/urbanstay/loginuser",state).then((res)=>{
 
     const  {mobile,role ,...values}=res.data
-
+   
+    sessionStorage.setItem("role", role)
 
 
     
