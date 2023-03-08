@@ -14,7 +14,7 @@ const USER_ROLE = {
     OWNER: "owner",
     ADMIN: "admin",
 };
-const CURRENT_USER_ROLE = USER_ROLE.TENANT;
+const CURRENT_USER_ROLE = sessionStorage.getItem("role");
 
 
 const Router = () => {
