@@ -6,7 +6,8 @@ import logo from "../../images/logo1.png"
 import "./homenavbar.css";
 
 const AdminNavbar = () =>{
-
+    const [state , setEmail] = useState(sessionStorage.getItem("values")) 
+    
         const [Mobile , setMobile] = useState(false)
 
     return(
@@ -23,12 +24,10 @@ const AdminNavbar = () =>{
                 <NavLink to="/contact" className="link" style={({isActive})=>(isActive?{color:"blue"}:{color:"black"})}>
                     Contact Us
                 </NavLink>
-                <NavLink to="/signin" className="link" style={({isActive})=>(isActive?{color:"blue"}:{color:"black"})}>
-                    SignIn
+                <NavLink to="/contact" className="link" style={({isActive})=>(isActive?{color:"blue"}:{color:"black"})}>
+                   {state}
                 </NavLink>
-                <NavLink to="/signup" className="link" style={({isActive})=>(isActive?{color:"blue"}:{color:"black"})}>
-                    SignUp
-                </NavLink>
+                
             </ul>
             <button className="mobile-menu-icon" onClick={()=>setMobile(!Mobile)}>
                 {Mobile?<ImCross/>:<FaBars/>}
