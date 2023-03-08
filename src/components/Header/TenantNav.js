@@ -4,8 +4,9 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import logo from "../../images/logo1.png"
 import "./homenavbar.css";
-
+import { Dropdown } from "react-bootstrap";
 const TenantNavbar = () => {
+    const [state, setEmail] = useState(sessionStorage.getItem("values"))
 
     const [Mobile, setMobile] = useState(false)
 
@@ -23,12 +24,24 @@ const TenantNavbar = () => {
                 <NavLink to="/contact" className="link" style={({ isActive }) => (isActive ? { color: "blue" } : { color: "black" })}>
                     Contact Us
                 </NavLink>
-                <NavLink to="/signin" className="link" style={({ isActive }) => (isActive ? { color: "blue" } : { color: "black" })}>
-                    SignIn
+                <NavLink to="" className="link" style={({ isActive }) => (isActive ? { color: "blue" } : { color: "black" })}>
+
+
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            {state}
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+
+
                 </NavLink>
-                <NavLink to="/signup" className="link" style={({ isActive }) => (isActive ? { color: "blue" } : { color: "black" })}>
-                    SignUp
-                </NavLink>
+
             </ul>
             <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
                 {Mobile ? <ImCross /> : <FaBars />}

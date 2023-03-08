@@ -9,6 +9,8 @@ import ErrorPage from "../pages/ErrorPages/Error404";
 import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
+import SearchItem from "../components/Room/searchItem/SearchItem";
+import List from "../components/Room/searchItem/List";
 // const USER_ROLE = {
 //     TENANT: "Tenant",
 //     OWNER: "Owner",
@@ -51,12 +53,15 @@ const Router = () => {
                     element={<Users />} />
                 {/* Room details Page route */}
                 {/* <Route exact path="/room/:id" element={<RoomDetails/>}/> */}
-                <Route
+                {/* <Route
                     exact path="/checkout"
-                    element={<Checkout />} />
+                    element={<Checkout />} /> */}
                 <Route
                     exact path="/tenant"
                     element={<Tenant />} />
+                {/* <Route
+                    exact path="/items"
+                    element={<List />} /> */}
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
 
