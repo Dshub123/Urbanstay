@@ -10,9 +10,9 @@ import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
 const USER_ROLE = {
-    TENANT: "tenant",
-    OWNER: "owner",
-    ADMIN: "admin",
+    TENANT: "Tenant",
+    OWNER: "Owner",
+    ADMIN: "Admin",
 };
 const CURRENT_USER_ROLE = sessionStorage.getItem("role");
 
