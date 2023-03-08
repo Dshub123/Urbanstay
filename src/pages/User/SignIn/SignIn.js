@@ -20,8 +20,8 @@ export default function SignIn() {
     const  {mobile,role ,...values}=res.data
    
     sessionStorage.setItem("role", role)
-
-
+    sessionStorage.setItem("values",values)
+    
     
     
     if(role=='Tenant'){

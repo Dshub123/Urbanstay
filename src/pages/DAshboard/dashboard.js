@@ -11,7 +11,7 @@ export default function Dashboard() {
                     <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
                         <div class="logo">
                             <a hef="home.html"><img src="http://jskrishna.com/work/merkury/images/logo.png" alt="merkery_logo" class="hidden-xs hidden-sm" />
-                                <img src="http://jskrishna.com/work/merkury/images/circle-logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo" />
+                              
                             </a>
                         </div>
                         <div class="navi">
