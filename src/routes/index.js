@@ -14,6 +14,7 @@ const USER_ROLE = {
     OWNER: "Owner",
     ADMIN: "Admin",
 };
+
 const CURRENT_USER_ROLE = sessionStorage.getItem("role");
 
 
@@ -68,7 +69,7 @@ function PublicElement({ children }) {
 }
 
 function TenantElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.TENANT) {
+    if (CURRENT_USER_ROLE == USER_ROLE.TENANT) {
         return <>{children}</>;
     }
     else {
@@ -76,7 +77,7 @@ function TenantElement({ children }) {
     }
 }
 function OwnerElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.OWNER) {
+    if (CURRENT_USER_ROLE == USER_ROLE.OWNER) {
         return <>{children}</>;
     }
     else {
@@ -84,7 +85,7 @@ function OwnerElement({ children }) {
     }
 }
 function AdminElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.ADMIN) {
+    if (CURRENT_USER_ROLE == USER_ROLE.ADMIN) {
         return <>{children}</>;
     }
     else {
