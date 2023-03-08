@@ -10,15 +10,12 @@ import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
 const USER_ROLE = {
-    TENANT: "tenant",
-    OWNER: "owner",
-    ADMIN: "admin",
+    TENANT: "Tenant",
+    OWNER: "Owner",
+    ADMIN: "Admin",
 };
-<<<<<<< HEAD
-const CURRENT_USER_ROLE = USER_ROLE.ADMIN;
-=======
+
 const CURRENT_USER_ROLE = sessionStorage.getItem("role");
->>>>>>> 840208a2ad71deecf8c25b29416e10de40565167
 
 
 const Router = () => {
@@ -72,7 +69,7 @@ function PublicElement({ children }) {
 }
 
 function TenantElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.TENANT) {
+    if (CURRENT_USER_ROLE == USER_ROLE.TENANT) {
         return <>{children}</>;
     }
     else {
@@ -80,7 +77,7 @@ function TenantElement({ children }) {
     }
 }
 function OwnerElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.OWNER) {
+    if (CURRENT_USER_ROLE == USER_ROLE.OWNER) {
         return <>{children}</>;
     }
     else {
@@ -88,7 +85,7 @@ function OwnerElement({ children }) {
     }
 }
 function AdminElement({ children }) {
-    if (CURRENT_USER_ROLE === USER_ROLE.ADMIN) {
+    if (CURRENT_USER_ROLE == USER_ROLE.ADMIN) {
         return <>{children}</>;
     }
     else {
