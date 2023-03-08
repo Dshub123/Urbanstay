@@ -351,7 +351,9 @@ header {
 .logo {
     text-align: center;
 }
-
+.navi{
+    height: 100vh;
+}
 .navi a {
     border-bottom: 1px solid #0d172e;
     border-top: 1px solid #0d172e;
@@ -366,6 +368,7 @@ header {
 .navi i {
     margin-right: 15px;
     color: #5584ff;
+        
 }
 
 .navi .active a {

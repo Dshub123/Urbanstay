@@ -20,8 +20,8 @@ export default function SignIn() {
     const  {mobile,role ,...values}=res.data
    
     sessionStorage.setItem("role", role)
-
-
+    sessionStorage.setItem("values",values)
+    
     
     
     if(role=='Tenant'){
@@ -110,7 +110,7 @@ const handler=(e)=>{
         <h3>Log in to UrbanStay</h3>
         <hr id="hrLine"/>
         <br/>
-        <div className="login-form">
+        <div className="form-group">
           <label for="MobileNo">Mobile Number</label>
           <input
             type="mobile"
