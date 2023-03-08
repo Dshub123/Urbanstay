@@ -9,6 +9,7 @@ import ErrorPage from "../pages/ErrorPages/Error404";
 import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
+import SingleRoom from "../components/Room/SingleRoom";
 const USER_ROLE = {
     TENANT: "Tenant",
     OWNER: "Owner",
@@ -57,6 +58,9 @@ const Router = () => {
                 <Route
                     exact path="/tenant"
                     element={<TenantElement><Tenant /></TenantElement>} />
+                 <Route
+                    exact path="/room"
+                    element={<TenantElement><SingleRoom /></TenantElement>} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
 

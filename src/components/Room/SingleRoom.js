@@ -8,7 +8,7 @@ import Star from "../Helpers/Star";
 
 const API = "https://api.pujakaitem.com/api/products";
 
-const SingleProduct = () => {
+const SingleRoom = () => {
   // const { getSingleProduct, isSingleLoading, singleProduct } =
   //   useProductContext();
 
@@ -100,4 +100,4 @@ const SingleProduct = () => {
 };
 
 
-export default SingleProduct;
+export default SingleRoom;
