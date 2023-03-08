@@ -11,12 +11,7 @@ export default function Dashboard() {
                     <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
                         <div class="logo">
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 0b985c49b26ae4b0cd9654463afb3db7402273b3
                         </div>
                         <div class="navi">
                             <ul>

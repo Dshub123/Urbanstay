@@ -8,7 +8,6 @@ import AdminHome from "../pages/Admin/adminHome";
 import ErrorPage from "../pages/ErrorPages/Error404";
 import Checkout from "../pages/PaymentPage";
 import Users from "../pages/Tables/User";
-import Tenant from "../components/Tenant/Tenant";
 
 const Router = () => {
     return (
@@ -46,8 +45,7 @@ const Router = () => {
                 <Route
                     exact path="/checkout"
                     element={<Checkout />} />
-                <Route
-                    exact path="/tenant"/>
+               
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
 
