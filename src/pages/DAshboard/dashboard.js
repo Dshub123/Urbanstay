@@ -10,16 +10,15 @@ export default function Dashboard() {
                 <div class="row display-table-row">
                     <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
                         <div class="logo">
-                            <a hef="home.html"><img src="http://jskrishna.com/work/merkury/images/logo.png" alt="merkery_logo" class="hidden-xs hidden-sm" />
-                                <img src="http://jskrishna.com/work/merkury/images/circle-logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo" />
-                            </a>
+
+
                         </div>
                         <div class="navi">
                             <ul>
                                 <li class="active"><Link to={"/admin/users"}><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></Link></li>
                                 <li><Link to={""}><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Inventory</span></Link></li>
                                 <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Sales</span></a></li>
-                            
+
                             </ul>
                         </div>
                     </div>
@@ -54,8 +53,7 @@ export default function Dashboard() {
                                                 </a>
                                             </li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user" />
-                                                    <b class="caret"></b></a>
+                                                    <b class="caret"></b>
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <div class="navbar-content">

@@ -25,14 +25,6 @@ const Users = () => {
     }, [])
     return <>
         <table border="1">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Address</th>
-            </tr>
-            </thead>
             <tbody>
             <UserData users={users} />
             </tbody>

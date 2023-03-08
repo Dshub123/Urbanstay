@@ -110,7 +110,7 @@ const handler=(e)=>{
         <h3>Log in to UrbanStay</h3>
         <hr id="hrLine"/>
         <br/>
-        <div className="login-form">
+        <div className="form-group">
           <label for="MobileNo">Mobile Number</label>
           <input
             type="mobile"
