@@ -5,7 +5,7 @@ export default function FeaturedProperties() {
     <div className="fp">
       <div className="fpItem">
         <img
-          src="C:\Users\LENOVO\Desktop\hostel C:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel imagesC:\Users\LENOVO\Desktop\hostel images"
+          src="https://images.unsplash.com/photo-1596276020587-8044fe049813?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG9zdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
           alt=""
           className="fpImg"
         />
@@ -33,7 +33,7 @@ export default function FeaturedProperties() {
       </div>
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/232902339.jpg?k=3947def526b8af0429568b44f9716e79667d640842c48de5e66fd2a8b776accd&o=&hp=1"
+          src="https://images.unsplash.com/photo-1619810230359-b2c2f61c49cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9zdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
           alt=""
           className="fpImg"
         />
