@@ -1,21 +1,6 @@
 const UserData = ({users}) => {
     return (
         <>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table class="table">
   <thead class="thead-dark">
     <tr>
