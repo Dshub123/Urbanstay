@@ -1,0 +1,21 @@
+
+#rowslide1{
+    animation: slidecontent 1s ease-in;
+}
+
+#rowslide2{
+    animation: slidecontent 2s ease-in;
+}
+
+#rowslide3{
+    animation: slidecontent 3s ease-in;
+}
+
+@keyframes slidecontent{
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        /* transform: translateX(100%); */
+    }
+}

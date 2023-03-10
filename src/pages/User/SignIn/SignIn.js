@@ -3,6 +3,8 @@ import React, { Component, useEffect, useState } from "react";
 import { useNavigate, useNavigation } from "react-router-dom";
 import HomeNavbar from "../../../components/Header/HomeNavBar";
 import config from "../../../config";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./signin.css";
 export default function SignIn() {
   const navigate=useNavigate()  
@@ -12,13 +14,14 @@ export default function SignIn() {
     role:"",
   })
   
-  const signup=()=>{
+  const signin=()=>{
          
           
     axios.post(config.serverURL+"/urbanstay/loginuser",state).then((res)=>{
 
     const  {mobile,role ,...values}=res.data
     console.log(role);
+    alert(`welcome ${values.email}`);
     sessionStorage.setItem("role", role)
     sessionStorage.setItem("values",values.email)
     
@@ -103,7 +106,7 @@ const handler=(e)=>{
         </div> */}
         <br></br>
 
-        <button  className="btn btn-primary btn-lg btn-block" onClick={signup}>
+        <button  className="btn btn-primary btn-lg btn-block" onClick={signin}>
           Sign in
         </button>
         <br/><br/>
@@ -112,6 +115,7 @@ const handler=(e)=>{
         </h6>
       
       </div>
+      <ToastContainer />
       </>
     );
   
