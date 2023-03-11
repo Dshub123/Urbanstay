@@ -5,6 +5,9 @@ import "./signup.css";
 import axios from "axios";
 import config from "../../../config";
 import { redirect, Redirect, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default class SignUp extends Component {
      
 
@@ -42,14 +45,39 @@ export default class SignUp extends Component {
       axios.post(config.serverURL+"/urbanstay/newuser",this.state).then(res=>{
            
 
-             alert("User Registered")
-             return <Navigate></Navigate>     
+             alert("User Registered");
+            toast.success(`${this.state.email} Registered Successfully!`, {
+              position: "top-center",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
+              setTimeout(() => {
+                // return <Navigate ></Navigate>   
+                this.props.navigate("/signin");   
+              }, 2000);
+      
+               
            
 
       }).catch(err=>console.log(err))
     } else {
-      // Update the state with the validation errors
-      this.setState({ errors });
+      // toast.error("Invalid Credentials!", {
+        //   position: "top-center",
+        //   autoClose: 2000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "colored",
+        //   });
+        // Update the state with the validation errors
+        this.setState({ errors });
     }
   };
 
@@ -110,7 +138,7 @@ export default class SignUp extends Component {
         return (
           <>
           <HomeNavbar/>
-          <div className="container" id="form-container">
+          <div className="container" id="form-container" style={{padding:"1%"}}>
             <form>
                 <h3>Let's Start Journey with UrbanStay</h3>
                 <hr id="hrLine"/>
@@ -230,13 +258,14 @@ export default class SignUp extends Component {
                 type="submit" 
                 className="btn btn-primary btn-lg btn-block" 
                 onClick={this.handleSubmit}
+                style={{width:"40%"}}
                 // onClick={(this.alertevent)}
                 >
                   Register
                 </button>
                 <br/>
                 <br/>
-                <h6 className="forgot-password text-right">
+                <h6 className="forgot-password text-right mr-3">
                     Already registered <a href="/signin">Sign in?</a>
                 </h6>
             </form>
@@ -246,9 +275,9 @@ export default class SignUp extends Component {
         );
     }
 }
-export  function Navigate(props){
-  var navig= useNavigate()
-  return <SignUp navigate={navig} ></SignUp>
+export  function AppWithRouter(props){
+  const navigate= useNavigate()
+  return (<SignUp navigate={navigate} ></SignUp>)
 
 }
 

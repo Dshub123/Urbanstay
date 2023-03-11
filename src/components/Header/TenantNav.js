@@ -1,14 +1,38 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import logo from "../../images/logo1.png"
 import "./homenavbar.css";
-import { Dropdown } from "react-bootstrap";
+import { Button, Dropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaPowerOff, FaAddressBook, FaBed } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const TenantNavbar = () => {
     const [state, setEmail] = useState(sessionStorage.getItem("values"))
-
+    const [Role, setRole] = useState(sessionStorage.getItem("role"))
     const [Mobile, setMobile] = useState(false)
+    const navigate=useNavigate()  
+    const logout = () => {
+        sessionStorage.clear();
+        toast.success(`Thank You for Using Urban Stay!`, {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            setTimeout(() => {
+            
+              navigate('/signin');
+              
+            }, 2000);
+
+      };
 
     return (
         <nav className="navbar1">
@@ -28,14 +52,23 @@ const TenantNavbar = () => {
 
 
                     <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        <Dropdown.Toggle variant="info-outline" style={{border:"none"}} id="dropdown-custom-components">
                             {state}
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        <Dropdown.Item onClickCapture={logout} style={{color:"steelblue"}}>
+                                <FaPowerOff className="icons mx-2" style={{color:"steelblue"}} size={20}/>
+                                <b><i>Logout</i></b>
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
+                             <FaAddressBook className="icons mx-2" style={{color:"steelblue"}} size={20}/>
+                                <b><i>Profile</i></b>
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-3" style={{color:"steelblue"}}>
+                            <FaBed className="icons mx-2" style={{color:"steelblue"}} size={20}/>
+                            <b><i>Bookings</i></b>
+                            </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 

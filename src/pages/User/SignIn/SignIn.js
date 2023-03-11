@@ -13,6 +13,8 @@ export default function SignIn() {
     password: '',
     role:"",
   })
+
+  
   
   const signin=()=>{
          
@@ -21,28 +23,93 @@ export default function SignIn() {
 
     const  {mobile,role ,...values}=res.data
     console.log(role);
-    alert(`welcome ${values.email}`);
+    
     sessionStorage.setItem("role", role)
     sessionStorage.setItem("values",values.email)
-    
+   
     
     
     if(role=='Tenant'){
-      navigate('/tenant')
+      toast.success(`welcome ${values.email}`, {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        setTimeout(() => {
+          navigate('/tenant')
+          
+        }, 2000);
+
+      // navigate('/tenant')
     }
     else if(role=='Owner'){
-      navigate("/owner")
+      toast.success(`welcome ${values.email}`, {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        // alert(`welcome ${values.email}`);
+        setTimeout(() => {
+          navigate("/owner")
+          
+        }, 2000);
 
     }
     else if(role=='Admin'){
-      navigate('/admin')
+      toast.success(`welcome ${values.email}`, {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        setTimeout(() => {
+          navigate('/admin')
+          
+        }, 2000);
+
+        // navigate('/admin')
     }
     else{
+      toast.error("Invalid Credentials!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+  
       navigate("/signin")
     }
                   
     }).catch(err=>{
      console.log(err)
+     toast.error(`${err}`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
     })
 
  }
@@ -61,7 +128,7 @@ const handler=(e)=>{
     return (
       <>
       <HomeNavbar/>
-      <div className="container" id="form-container">
+      <div className="container" id="form-container" style={{padding:"1%"}}>
       
 
         <h3>Log in to UrbanStay</h3>
@@ -77,6 +144,7 @@ const handler=(e)=>{
             name="mobile"
             value={state.mobile}
             onChange={handler}
+            required
           />
           
         </div>
@@ -92,6 +160,7 @@ const handler=(e)=>{
             name="password"
             value={state.password}
             onChange={handler}
+            required
           />
          
         </div>
@@ -106,16 +175,16 @@ const handler=(e)=>{
         </div> */}
         <br></br>
 
-        <button  className="btn btn-primary btn-lg btn-block" onClick={signin}>
+        <button  className="btn btn-primary btn-lg btn-block" onClick={signin} style={{width:"40%"}}>
           Sign in
         </button>
         <br/><br/>
-        <h6 className="forgot-password text-right">
+        <h6 className="forgot-password text-right mr-4">
           Not registered yet? <a href="./signup">Sign Up</a>
         </h6>
       
       </div>
-      <ToastContainer />
+      <ToastContainer/>
       </>
     );
   
