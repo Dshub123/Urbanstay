@@ -61,14 +61,14 @@ const AdminNavbar = () => {
                                 <FaPowerOff className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Logout</i></b>
                             </Dropdown.Item>
-                            <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
+                            {/* <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
                              <FaAddressBook className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Profile</i></b>
                             </Dropdown.Item>
                             <Dropdown.Item href="#/action-3" style={{color:"steelblue"}}>
                             <FaBed className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                             <b><i>Bookings</i></b>
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
 

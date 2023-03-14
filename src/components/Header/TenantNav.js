@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaIdCard } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import logo from "../../images/logo1.png"
 import "./homenavbar.css";
@@ -57,12 +57,13 @@ const TenantNavbar = () => {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
+                        
                         <Dropdown.Item onClickCapture={logout} style={{color:"steelblue"}}>
                                 <FaPowerOff className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Logout</i></b>
                             </Dropdown.Item>
                             <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
-                             <FaAddressBook className="icons mx-2" style={{color:"steelblue"}} size={20}/>
+                             <FaIdCard className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Profile</i></b>
                             </Dropdown.Item>
                             <Dropdown.Item href="#/action-3" style={{color:"steelblue"}}>
