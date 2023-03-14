@@ -2,10 +2,15 @@ import "./list.css";
 import { useState } from "react";
 import { DatePicker, Space } from "antd";
 import SearchItem from "./SearchItem";
+import moment from "moment";
 
 const {RangePicker}=DatePicker;
 const List = () => {
+    const [fromDate, setFromDate]=useState()
+    const [toDate, setToDate]=useState()
+    function filterByDate(dates){
 
+    }
     // const [openDate, setOpenDate] = useState(false);
     return (
         <div>
@@ -19,8 +24,10 @@ const List = () => {
                             <input placeholder={""} type="text" />
                         </div>
                         <div className="lsItem">
-                            <label>Check-in Date</label>
-                            <span onClick={""}></span>
+                            <label>Select Dates</label>
+                            <Space direction="vertical" size={12}>
+                                <RangePicker format='DD-MM-YYYY' onChange={filterByDate}/>
+                            </Space>
                         </div>
                         <div className="lsItem">
                             <label>Options</label>
