@@ -1,13 +1,17 @@
 import "./list.css";
 import { useState } from "react";
-import { format } from "date-fns";
-import { DateRange } from "react-date-range";
+import { DatePicker, Space } from "antd";
 import SearchItem from "./SearchItem";
+import moment from "moment";
 
+const {RangePicker}=DatePicker;
 const List = () => {
+    const [fromDate, setFromDate]=useState()
+    const [toDate, setToDate]=useState()
+    function filterByDate(dates){
 
-    const [openDate, setOpenDate] = useState(false);
-
+    }
+    // const [openDate, setOpenDate] = useState(false);
     return (
         <div>
 
@@ -20,8 +24,10 @@ const List = () => {
                             <input placeholder={""} type="text" />
                         </div>
                         <div className="lsItem">
-                            <label>Check-in Date</label>
-                            <span onClick={""}></span>
+                            <label>Select Dates</label>
+                            <Space direction="vertical" size={12}>
+                                <RangePicker format='DD-MM-YYYY' onChange={filterByDate}/>
+                            </Space>
                         </div>
                         <div className="lsItem">
                             <label>Options</label>
@@ -38,33 +44,7 @@ const List = () => {
                                     </span>
                                     <input type="number" className="lsOptionInput" />
                                 </div>
-                                <div className="lsOptionItem">
-                                    <span className="lsOptionText">Adult</span>
-                                    <input
-                                        type="number"
-                                        min={1}
-                                        className="lsOptionInput"
-                                        placeholder={"options.adult"}
-                                    />
-                                </div>
-                                <div className="lsOptionItem">
-                                    <span className="lsOptionText">Children</span>
-                                    <input
-                                        type="number"
-                                        min={0}
-                                        className="lsOptionInput"
-                                        placeholder={"options.children"}
-                                    />
-                                </div>
-                                <div className="lsOptionItem">
-                                    <span className="lsOptionText">Room</span>
-                                    <input
-                                        type="number"
-                                        min={1}
-                                        className="lsOptionInput"
-                                        placeholder={"options.room"}
-                                    />
-                                </div>
+                         
                             </div>
                         </div>
                         <button>Search</button>

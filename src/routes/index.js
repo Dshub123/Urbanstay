@@ -10,6 +10,8 @@ import ErrorPage from "../pages/ErrorPages/Error404";
 import Users from "../pages/Tables/User";
 import Tenant from "../components/Tenant/Tenant";
 import Owner from "../components/Owner/Owner";
+// import ProfileCard from "../pages/ProfileCard";
+import Profile from "../components/Owner/Profile";
 // import SearchItem from "../components/Room/searchItem/SearchItem";
 // import List from "../components/Room/searchItem/List";
 // const USER_ROLE = {
@@ -58,6 +60,9 @@ const Router = () => {
                 <Route
                     exact path="/owner/users"
                     element={<Users />} />
+                  <Route
+                    exact path="/owner/profile"
+                    element={<Profile />} />
 
                 {/* Room details Page route */}
                 {/* <Route exact path="/room/:id" element={<RoomDetails/>}/> */}

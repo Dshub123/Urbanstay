@@ -6,7 +6,7 @@ import logo from "../../images/logo1.png"
 import "./homenavbar.css";
 import { Button, Dropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaPowerOff, FaAddressBook, FaBed } from "react-icons/fa";
+import { FaPowerOff, FaAddressBook, FaBed, FaIdCard } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const OwnerNavbar = () => {
@@ -60,14 +60,20 @@ const OwnerNavbar = () => {
                                 <FaPowerOff className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Logout</i></b>
                             </Dropdown.Item>
-                            <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
+                                <Dropdown.Item  navigate="/owner/profile" style={{color:"steelblue"}}>
+                                <NavLink to="/owner/profile" className="link" style={{color:"steelblue"}}>
+                                    <FaIdCard className="icons mx-2" style={{color:"steelblue"}} size={20}/>
+                                    <b><i>Profile</i></b>
+                            </NavLink>
+                                </Dropdown.Item>
+                            {/* <Dropdown.Item href="#/action-2" style={{color:"steelblue"}}>
                              <FaAddressBook className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                                 <b><i>Profile</i></b>
                             </Dropdown.Item>
                             <Dropdown.Item href="#/action-3" style={{color:"steelblue"}}>
                             <FaBed className="icons mx-2" style={{color:"steelblue"}} size={20}/>
                             <b><i>Bookings</i></b>
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
 

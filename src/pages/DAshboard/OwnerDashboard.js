@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FaThList, FaAddressBook, FaBed, FaChartPie } from "react-icons/fa";
 import './dashboard.css'
 export default function Dashboard() {
+   const id=1;
+    // useState{id, setId}={};
     return (
         <>
 
@@ -14,28 +17,46 @@ export default function Dashboard() {
                         </div>
                         <div class="navi">
                             <ul>
-                                <li class="active"><Link to={"/admin/users"}><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></Link></li>
-                                <li><Link to={""}><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Inventory</span></Link></li>
-                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Sales</span></a></li>
+                            <li class="active">
+                                    <Link to={"/admin"}>
+                                        <span class="hidden-xs hidden-sm">
+                                            <FaChartPie className="icons mx-2" style={{color:"white"}} size={20}/>
+                                            Dashboard
+                                        </span>
+                                    </Link>
+                                </li>
+                                <li class="">
+                                    <Link to={`/owner/${id}/tenants`}>
+                                        <span class="hidden-xs hidden-sm">
+                                            <FaThList className="icons mx-2" style={{color:"white"}} size={20}/>                                    
+                                            Tenants
+                                        </span>
+                                    </Link>
+                                </li>
+                                <li class="">
+                                    <Link to={`/owner/${id}/rooms`}>
+                                        <span class="hidden-xs hidden-sm">
+                                            <FaAddressBook className="icons mx-2" style={{color:"white"}} size={20}/>                                    
+                                            Rooms
+                                        </span>
+                                    </Link>
+                                </li>
+                                <li class="">
+                                    <Link to={`/owner/${id}/bookings`}>
+                                        <span class="hidden-xs hidden-sm">
+                                            <FaBed className="icons mx-2" style={{color:"white"}} size={20}/>                                    
+                                            Bookings
+                                        </span>
+                                    </Link>
+                                </li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-10 col-sm-11 display-table-cell v-align">
-                        <button type="button" class="slide-toggle">Slide Toggle</button>
                         <div class="row">
                             <header>
                                 <div class="col-md-7">
-                                    <nav class="navbar-default pull-left">
-                                        <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
-                                                <span class="sr-only">Toggle navigation</span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                            </button>
-                                        </div>
-                                    </nav>
                                     <div class="search hidden-xs hidden-sm">
                                         <input type="text" placeholder="Search" id="search" />
                                     </div>

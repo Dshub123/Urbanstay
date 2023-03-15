@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AdminNavbar from '../../components/Header/AdminNav';
-import Dashboard from '../DAshboard/dashboard'
+import AdminDashboard from '../DAshboard/AdminDashboard'
 const AdminHome = () => {
     const adminhome = () => {
 
@@ -10,7 +10,7 @@ const AdminHome = () => {
                 <br></br>
                 <br></br>
                 <h1 style={{ textAlign: "center" }}>Admin Dashboard</h1>
-                <Dashboard></Dashboard>
+                <AdminDashboard/>
             </>
         )
     }
