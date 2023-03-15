@@ -71,8 +71,8 @@ const SearchItem = () => {
                       <button>8.9</button>
                     </div>
                     <div className="siDetailTexts">
-                      <span className="siPrice">{props.rent}</span>
-                      <span className="siTaxOp">{props.deposite}</span>
+                      <span className="siPrice">&#8377; {props.rent}/-</span>
+                      <span className="siTaxOp">&#8377; {props.deposite}/-</span>
                       <StripeCheckout
                         token={(token) => {
                           console.log(token)
@@ -83,7 +83,7 @@ const SearchItem = () => {
                         //Stripe Key
                         stripeKey="pk_test_51Mj623SAjlvgCoYxOeDUImAQR9PXnx5U1kc8HlhpTaDP1ykZWFpH3MEDLY8VXZ5HySC4MbmVC71tOVPIMFv1zBMR00dvXhOsjO"
                       >
-                        <button className="siCheckButton">Buy Now</button></StripeCheckout>
+                        <button className="siCheckButton">Book Now</button></StripeCheckout>
                     </div>
                   </div>
                 )
