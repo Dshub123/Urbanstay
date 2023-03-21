@@ -54,14 +54,26 @@ const Router = () => {
                 <Route
                     exact path="/admin/users"
                     element={<Users />} />
-                                <Route
+                <Route
                     exact path="/owner"
                     element={<Owner />} ></Route>
                 <Route
-                    exact path="/owner/users"
+                    exact path="/owner/:id/tenants"
                     element={<Users />} />
-                  <Route
+
+                <Route
+                    exact path="/admin/users"
+                    element={<Users />} />
+                <Route
                     exact path="/owner/profile"
+                    element={<Profile />} />
+
+                <Route
+                    exact path="/admin/profile"
+                    element={<Profile />} />
+
+                <Route
+                    exact path="/user/profile"
                     element={<Profile />} />
 
                 {/* Room details Page route */}

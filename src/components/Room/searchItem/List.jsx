@@ -2,7 +2,8 @@ import "./list.css";
 import { useState } from "react";
 import { DatePicker, Space } from "antd";
 import SearchItem from "./SearchItem";
-import moment from "moment";
+//import moment from "moment";
+import moment from "moment/moment";
 
 const {RangePicker}=DatePicker;
 const List = () => {

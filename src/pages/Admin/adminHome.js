@@ -7,10 +7,7 @@ const AdminHome = () => {
         return (
             <>
                 <AdminNavbar></AdminNavbar>
-                <br></br>
-                <br></br>
-                <h1 style={{ textAlign: "center" }}>Admin Dashboard</h1>
-                <AdminDashboard/>
+                <AdminDashboard />
             </>
         )
     }
