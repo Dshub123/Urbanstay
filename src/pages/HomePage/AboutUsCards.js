@@ -91,7 +91,7 @@ export default function AboutUsCards(){
         </Card.Body>
         </Card>
         </Col>
-        <Col>
+        {/* <Col>
         <Card style={{ width: '12rem', border:"1px solid goldernrod"}}>
           <Card.Img variant="top" src="https://media.istockphoto.com/id/1354842602/photo/portrait-of-a-young-businesswoman-working-on-a-laptop-in-an-office.jpg?b=1&s=170667a&w=0&k=20&c=4yOdpsESNHBHt13YdrgMBAbt6mxjsDOWKGUJw0CC-Zs=" />
         <Card.Body>
@@ -123,7 +123,7 @@ export default function AboutUsCards(){
           </Card.Text>
         </Card.Body>
         </Card>
-        </Col>
+        </Col> */}
         </Row>
         </>
     )
